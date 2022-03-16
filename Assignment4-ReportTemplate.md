@@ -2,12 +2,12 @@
 
 **Lab. Report \#4 – Mutation Testing and Web app testing**
 
-| Group \#:       |   |
+| Group \#:       | 30  |
 |-----------------|---|
-| Student Names:  |   |
-|                 |   |
-|                 |   |
-|                 |   |
+| Student Names:  | Agam Aulakh  |
+|                 | Melanie Nguyen  |
+|                 | Heidi Schaefer  |
+|                 | Jeff Roszell  |
 
 # Introduction
 
@@ -16,7 +16,9 @@
 
 # Report all the statistics and the mutation score for each test class
 
+## Data Utilities
 
+## Range
 
 # Analysis drawn on the effectiveness of each of the test classes
 
@@ -25,6 +27,17 @@
 # A discussion of what could have been done to improve the mutation score of the test suites
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
+
+## Why?
+We need mutation testing to ensure our test cases catch faults. If source code is changed, the test result should also change.
+
+## Advantages
+- Good quantitative analysis of the quality of test suite
+- Easy to identify tests to edit after receiving mutation test results
+
+## Disadvantages
+- Computationally very expensive
+- Caused our IDEs to crash multiple times
 
 # Explain your SELENUIM test case design process
 
@@ -35,7 +48,6 @@
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
 # How the team work/effort was divided and managed
-
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
