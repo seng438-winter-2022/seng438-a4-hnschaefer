@@ -47,9 +47,10 @@ The login process is a typical test case as there are many ways the output can d
 One of the main functions of a shopping website is the search functionality. For this test, we searched for an item that exists on the site, and an item that does not exist on the site.
 
 ### TC3 - Cart Functionality
-For this test, first, an empty cart was viewed. Then, we added an item from the main page to the cart, viewed it and selected the checkout button.
+For this test, items are first added to the cart, then in another test they are removed.
 
 ### TC4 - Browse Jerseys
+For this test, we navigated to the "Jerseys & Fan Wear" section of the site, and used the filter and next page functionalities.
 
 ### TC5 - Viewing FAQ's
 The FAQ page contains many avenues to explore. For the test purposes, we tested the button/link to shipping details and also the tracking order. As well each page would be scrolled upon to get to the apprpriate button. Then the final page was scrolled as well to ensure proper filling of all pages.
@@ -58,6 +59,7 @@ The FAQ page contains many avenues to explore. For the test purposes, we tested 
 The store locator takes a variety of inputs into its main objective functional query box. We decided that provind a valid and invalid input would suffice. The resulting page would be scrolled in order to ensure no bugs.
 
 ### TC7 - Browse Wellness
+For this test, we browse to the Wellness section and use the sort by and show in stock functionalities.
 
 ### TC8 - Triangle Rewards
 
