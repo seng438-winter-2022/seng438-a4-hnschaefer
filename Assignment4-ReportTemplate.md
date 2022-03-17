@@ -78,21 +78,21 @@ For this test, we browse to the Wellness section and use the sort by and show in
 
 # How each functionality was tested with different test data
 
-TC1 - 
+TC1 - Testing with correct details, and invalid account details, successful and unsuccessful login
 
-TC2 - 
+TC2 - Testing with valid and invalid search criteria
 
-TC3 - 
+TC3 - Testing interactions of both adding items and removing items
 
-TC4 - 
+TC4 - Used different filters in order to see changes in the browsable items
 
 TC5 - There were multiple FAQ button links followed 
 
 TC6 - There was invalid and valid inputs used for the store locater
 
-TC7 - 
+TC7 - Used different sorting parameters and filters
 
-TC8 - 
+TC8 - Navigated from triangle rewards page to internal pages and external hosted media (youtube)
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
