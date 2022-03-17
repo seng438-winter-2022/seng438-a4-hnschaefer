@@ -55,7 +55,9 @@ We need mutation testing to ensure our test cases catch faults. If source code i
 - Computationally very expensive
 - Caused our IDEs to crash multiple times
 
-# Explain your SELENUIM test case design process
+# Explain your SELENIUM test case design process
+To create our test cases, we simply walked through unique functionalities as a regular user would do if they were navigating through the SportChek website. For each page, we created two separate tests for slightly different functionalities.
+
 ### TC1 - Login/Account
 The login process is a typical test case as there are many ways the output can differ based on the input. An account was initially created as both its own test, and to complete testing for login purposes. The account was used to successfully log in, and an incorrect attempt was made as well.
 
@@ -78,6 +80,7 @@ The store locator takes a variety of inputs into its main objective functional q
 For this test, we browse to the Wellness section and use the sort by and show in stock functionalities.
 
 ### TC8 - Triangle Rewards
+For this test, we navigate to the external Triangle rewards site, and from there go to the "learn more" page, and their YouTube page.
 
 # Explain the use of assertions and checkpoints
 
@@ -97,7 +100,7 @@ TC6 - There was invalid and valid inputs used for the store locater
 
 TC7 - Used different sorting parameters and filters
 
-TC8 - Navigated from triangle rewards page to internal pages and external hosted media (youtube)
+TC8 - Navigated from triangle rewards page to internal pages and external hosted media (YouTube)
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
