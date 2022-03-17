@@ -69,3 +69,4 @@ TC8 - Triangle Rewards
 # Difficulties encountered, challenges overcome, and lessons learned
 
 # Comments/feedback on the lab itself
+This lab, when working, was a good exposure to industry tools used in GUI testing. Also we were exposed to mutation testing however there were quite a few problems with the lab content and some of were never able to get total functionality out of the lab. If the issues are worked out, this will surely be an informative lab.
