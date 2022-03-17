@@ -41,6 +41,12 @@ We need mutation testing to ensure our test cases catch faults. If source code i
 
 # Explain your SELENUIM test case design process
 
+TC5 - Viewing FAQ's
+The FAQ page contains many avenues to explore. For the test purposes, we tested the button/link to shipping details and also the tracking order. As well each page would be scrolled upon to get to the apprpriate button. Then the final page was scrolled as well to ensure proper filling of all pages.
+
+TC6 - Store Locator
+The store locator takes a variety of inputs into its main objective functional query box. We decided that provind a valid and invalid input would suffice. The resulting page would be scrolled in order to ensure no bugs.
+
 # Explain the use of assertions and checkpoints
 
 # how did you test each functionaity with different test data
