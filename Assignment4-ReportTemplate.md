@@ -41,10 +41,13 @@ We need mutation testing to ensure our test cases catch faults. If source code i
 
 # Explain your SELENUIM test case design process
 TC1 - Login/Account
+The login process is a typical test case as there are many ways the output can differ based on the input. An account was initially created as both its own test, and to complete testing for login purposes. The account was used to successfully log in, and an incorrect attempt was made as well.
 
 TC2 - Search Functionality
+One of the main functions of a shopping website is the search functionality. For this test, we searched for an item that exists on the site, and an item that does not exist on the site.
 
 TC3 - Cart Functionality
+For this test, first, an empty cart was viewed. Then, we added an item from the main page to the cart, viewed it and selected the checkout button.
 
 TC4 - Browse Jerseys
 
