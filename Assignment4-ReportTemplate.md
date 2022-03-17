@@ -62,7 +62,37 @@ TC8 - Triangle Rewards
 
 # How each functionality was tested with different test data
 
+TC1 - 
+TC2 - 
+TC3 - 
+TC4 - 
+TC5 - There were multiple FAQ button links followed
+TC6 - There was invalid and valid inputs used for the store locater
+TC7 - 
+TC8 - 
+
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
+
+Selenium
+Pros:
+Very easy to automate the tests
+Very easy to alter values with tests that depend on them
+Accepted on most major browsers
+Cons:
+Has problems with some types of addon/extension such as flash, shockwave
+Is limited to browser testing of UI
+No desktop support
+
+Sikulix
+Pros:
+Scalability of visual matching (perfect to similar)
+Testing is based on visual likeness, and therefore can support many more applications such as desktop and applications
+Can also testing more functionality that isn't possible with script based testing (Selenium)
+Cons:
+More involved to setup
+Does not test how we arrive at the given "visual environment"
+Cannot test some functionality of scripts if there is no visual representation attached to it
+Some GUI elements are not measured/captured, i.e. load times
 
 # How the team work/effort was divided and managed
 
