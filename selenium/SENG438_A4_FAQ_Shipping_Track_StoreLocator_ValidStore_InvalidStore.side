@@ -1,0 +1,362 @@
+{
+  "id": "5efb2a23-7a31-4bd2-a63c-ec17e8c4c550",
+  "version": "2.0",
+  "name": "Lab4 - Sportchek",
+  "url": "https://www.sportchek.ca",
+  "tests": [{
+    "id": "a2471f34-e321-4648-b3f7-47c2919a689c",
+    "name": "FAQ- Track Order",
+    "commands": [{
+      "id": "b2519f16-2e90-4b76-b2f6-22829646ca21",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4a74968-5e05-416e-b874-dfa0c9a5bb13",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1478x1025",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd6c2f47-94d7-445b-aaf9-beb81d0dd37c",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3270)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee78d88a-535a-4e0b-9f4f-96a88bae2fa2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Help & FAQ's",
+      "targets": [
+        ["linkText=Help & FAQ's", "linkText"],
+        ["css=.supportLinks .footer-section__menu-link:nth-child(1)", "css:finder"],
+        ["xpath=(//a[contains(@href, 'help-desk.html')])[2]", "xpath:href"],
+        ["xpath=//div[3]/div[3]/div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a80dcb1f-d6b1-4776-801f-013b5df3871c",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,7)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b2f844c-e789-4cce-8c3b-b21ab3284485",
+      "comment": "",
+      "command": "click",
+      "target": "css=.help-desk-list-links-item-wrap:nth-child(2) .help-desk-page-list__item:nth-child(1) > .help-desk-page-list__link",
+      "targets": [
+        ["css=.help-desk-list-links-item-wrap:nth-child(2) .help-desk-page-list__item:nth-child(1) > .help-desk-page-list__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Tracking Your Order')])[2]", "xpath:link"],
+        ["xpath=//main[@id='main-content']/div[2]/div/div/div[2]/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'help-desk/shipping-page/shipment-tracking-page.html')]", "xpath:href"],
+        ["xpath=//div[2]/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a15dcfdf-6ddc-4c3d-a98d-7a8d50b8607d",
+    "name": "FAQ - View Shipping Details",
+    "commands": [{
+      "id": "b582c2e1-d342-4b72-93c9-5dda91d527a6",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f580089a-34ac-4d1c-9f5f-daf92d66ae3b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1478x1025",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e71fc51-82a1-4e28-9928-693668513bd7",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,68)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "042c0572-411e-43f6-94ad-72cf4811594d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Help & FAQ's",
+      "targets": [
+        ["linkText=Help & FAQ's", "linkText"],
+        ["css=.supportLinks .footer-section__menu-link:nth-child(1)", "css:finder"],
+        ["xpath=(//a[contains(@href, '/help-desk.html')])[2]", "xpath:href"],
+        ["xpath=//div[3]/div[3]/div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7981d1e-3539-4ed1-9e9a-26b28c1cb7eb",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Help & FAQ's",
+      "targets": [
+        ["linkText=Help & FAQ's", "linkText"],
+        ["css=.supportLinks .footer-section__menu-link:nth-child(1)", "css:finder"],
+        ["xpath=(//a[contains(@href, '/help-desk.html')])[2]", "xpath:href"],
+        ["xpath=//div[3]/div[3]/div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "27beb895-8a57-4a85-8394-2cf5310c530e",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9dd955d0-0b1a-4d1b-a4d3-919e52e66f72",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Shipping",
+      "targets": [
+        ["linkText=Shipping", "linkText"],
+        ["css=.help-desk-list-links-item-wrap:nth-child(2) .help-desk-page-list__item:nth-child(2) > .help-desk-page-list__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Shipping')]", "xpath:link"],
+        ["xpath=//main[@id='main-content']/div[2]/div/div/div[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'help-desk/shipping-page/shipping-and-delivery.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Shipping')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2320392-b0ac-4f78-b8b3-50b9e9cbb447",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,624)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b4b2b48-74fa-4103-bc2d-24f27a63fe63",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1273)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "807dd9a9-9242-40e0-9a2b-afc799ef191a",
+    "name": "Store Locator - Valid",
+    "commands": [{
+      "id": "58245f3c-b16e-417b-9c45-98eb0f528676",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9fe421f5-78ad-4008-83fd-b081787c2bed",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x981",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51378d86-1f65-4b18-90b8-59cb66d1a8b8",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,11)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4d04d827-4f8f-44bc-8d07-1662a652815f",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,4568)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2634a1af-e984-404b-8948-9e634bf65501",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Store Locator",
+      "targets": [
+        ["linkText=Store Locator", "linkText"],
+        ["css=.footer-section__col:nth-child(2) .footer-section__menu-link:nth-child(1)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Store Locator')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'store-locator.html')])[2]", "xpath:href"],
+        ["xpath=//div[3]/div[2]/div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "54ec63ce-8b9b-4de3-b32b-23d5413df51e",
+      "comment": "",
+      "command": "click",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//div[@id='fis-map-container']/div/form/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a14f6186-e615-4855-9857-57613bf9f963",
+      "comment": "",
+      "command": "type",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//div[@id='fis-map-container']/div/form/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": "Calgary"
+    }, {
+      "id": "e605053f-4721-4ba6-a10e-52ea4c70da1f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.locate-store",
+      "targets": [
+        ["css=.locate-store", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='fis-map-container']/div/form/div/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0d7d4120-458d-4023-8c3f-6789ce9334e1",
+    "name": "Store Locator - Invalid",
+    "commands": [{
+      "id": "8f40dc98-1dba-4807-8eda-c2f0ff817563",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "92d4092a-3d14-4c10-ae85-9f6878091dad",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1478x1025",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05fe7ebc-c025-4a43-a531-9adcab80a8d3",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.header-cart__text",
+      "targets": [
+        ["css=.header-cart__text", "css:finder"],
+        ["xpath=//div[6]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "76e052ec-ceda-4113-aad3-374d38a9d504",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.header-pickup-store__link-container",
+      "targets": [
+        ["css=.header-pickup-store__link-container", "css:finder"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[6]", "xpath:href"],
+        ["xpath=//div[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Your Store:\nChoose now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "14ca9100-a0c5-415c-84b1-2de2c0251667",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.header-pickup-store__link-container",
+      "targets": [
+        ["css=.header-pickup-store__link-container", "css:finder"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[6]", "xpath:href"],
+        ["xpath=//div[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Your Store:\nChoose now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "647d9eba-dc64-4554-a7b1-7fc23b56a32c",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,21)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b0a4131-f9ef-4f18-b313-4b835ee15bb8",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,4092)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe342940-427b-452f-9cfb-1c4b3584c6b6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Store Locator",
+      "targets": [
+        ["linkText=Store Locator", "linkText"],
+        ["css=.footer-section__col:nth-child(2) .footer-section__menu-link:nth-child(1)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Store Locator')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'store-locator.html')])[2]", "xpath:href"],
+        ["xpath=//div[3]/div[2]/div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77ed91c8-36e3-4cd2-9968-86a70f1af92d",
+      "comment": "",
+      "command": "click",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//div[@id='fis-map-container']/div/form/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94e1f304-2fb8-4437-a44b-7afcbe303183",
+      "comment": "",
+      "command": "type",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//div[@id='fis-map-container']/div/form/div/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": "Yngot"
+    }, {
+      "id": "71d86126-92fb-46b2-8849-94e031a574ad",
+      "comment": "",
+      "command": "click",
+      "target": "css=.locate-store",
+      "targets": [
+        ["css=.locate-store", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='fis-map-container']/div/form/div/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4a72da21-c43f-47b1-997f-1248add60223",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a2471f34-e321-4648-b3f7-47c2919a689c"]
+  }],
+  "urls": ["https://www.sportchek.ca/"],
+  "plugins": []
+}
