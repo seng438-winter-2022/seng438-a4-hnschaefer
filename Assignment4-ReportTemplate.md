@@ -32,6 +32,11 @@ In this lab, mutation testing was performed on Range and DataUtilities classes f
 ![](media/r-after.png)
 
 # Analysis drawn on the effectiveness of each of the test classes
+The initial DataUtilities test class had a line coverage of 45% and a mutation coverage of 38% (261/687). After the addition of more test cases to kill mutants, line coverage and mutation coverage both increased by over 10%. Mutation coverage increased to 52% (an increase of 14%), which meant that the test class was more effective at  identifying mutants and killing them. This helps to ensure that more weaknesses and potential defects in the code were identified by the test class.
+
+The initial Range test class had a line coverage of 29% and a mutation coverage of 21%. Upon improving the test class, mutation coverage improved to 32% and line coverage improved to 35%. This increase in mutation coverage means the test class became more effective at identifying potential defects in the code. 
+
+However, the test class is still far from being fully effective and achieving 100% coverage. One of the reasons is due to the test class only addressing five methods in the Range and DataUtilites classes rather than all of the methods. 
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 
