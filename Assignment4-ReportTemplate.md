@@ -40,26 +40,26 @@ We need mutation testing to ensure our test cases catch faults. If source code i
 - Caused our IDEs to crash multiple times
 
 # Explain your SELENUIM test case design process
-TC1 - Login/Account
+### TC1 - Login/Account
 The login process is a typical test case as there are many ways the output can differ based on the input. An account was initially created as both its own test, and to complete testing for login purposes. The account was used to successfully log in, and an incorrect attempt was made as well.
 
-TC2 - Search Functionality
+### TC2 - Search Functionality
 One of the main functions of a shopping website is the search functionality. For this test, we searched for an item that exists on the site, and an item that does not exist on the site.
 
-TC3 - Cart Functionality
+### TC3 - Cart Functionality
 For this test, first, an empty cart was viewed. Then, we added an item from the main page to the cart, viewed it and selected the checkout button.
 
-TC4 - Browse Jerseys
+### TC4 - Browse Jerseys
 
-TC5 - Viewing FAQ's
+### TC5 - Viewing FAQ's
 The FAQ page contains many avenues to explore. For the test purposes, we tested the button/link to shipping details and also the tracking order. As well each page would be scrolled upon to get to the apprpriate button. Then the final page was scrolled as well to ensure proper filling of all pages.
 
-TC6 - Store Locator
+### TC6 - Store Locator
 The store locator takes a variety of inputs into its main objective functional query box. We decided that provind a valid and invalid input would suffice. The resulting page would be scrolled in order to ensure no bugs.
 
-TC7 - Browse Wellness
+### TC7 - Browse Wellness
 
-TC8 - Triangle Rewards
+### TC8 - Triangle Rewards
 
 # Explain the use of assertions and checkpoints
 
