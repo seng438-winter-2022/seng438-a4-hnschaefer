@@ -63,12 +63,19 @@ TC8 - Triangle Rewards
 # How each functionality was tested with different test data
 
 TC1 - 
+
 TC2 - 
+
 TC3 - 
+
 TC4 - 
-TC5 - There were multiple FAQ button links followed
+
+TC5 - There were multiple FAQ button links followed 
+
 TC6 - There was invalid and valid inputs used for the store locater
+
 TC7 - 
+
 TC8 - 
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
