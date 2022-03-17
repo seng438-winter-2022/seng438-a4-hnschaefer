@@ -13,12 +13,23 @@
 In this lab, mutation testing was performed on Range and DataUtilities classes from previous labs. Mutations were injected using the Pitest plug in for Eclipse. From these mutations, we were able to design new test cases to increase coverage of the SUT. GUI testing was also performed using Selenium plug in for Google Chrome. The SportChek website was tested for bugs using record and replay functionalities of this plug in. Selenium was also compared with another GUI testing tool, Sikulix.
 
 # Analysis of 10 Mutants of the Range class 
+## getLowerBound
+- post-increment/decrement
+- pre-increment/decrement
+
+## getUpperBound
+- post-increment/decrement
+- pre-increment/decrement 
 
 # Report all the statistics and the mutation score for each test class
 
 ## Data Utilities
+![](../media/du-before.png)
+![](../media/du-after.png)
 
 ## Range
+![](../media/r-before.png)
+![](../media/r-after.png)
 
 # Analysis drawn on the effectiveness of each of the test classes
 
