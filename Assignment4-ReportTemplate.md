@@ -95,6 +95,7 @@ Cannot test some functionality of scripts if there is no visual representation a
 Some GUI elements are not measured/captured, i.e. load times
 
 # How the team work/effort was divided and managed
+Initially we planned to divide up the work on the equally, however it became more of a group effort, with members contributing where they could, when they could. Due to lab issues and timing issues, we had to adjust our approach. Therefore as we moved through the lab, some members had larger commitments in certain areas and other areas were tackled by the remaining members.
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
