@@ -24,12 +24,12 @@ In this lab, mutation testing was performed on Range and DataUtilities classes f
 # Report all the statistics and the mutation score for each test class
 
 ## Data Utilities
-![](../media/du-before.png)
-![](../media/du-after.png)
+![](media/du-before.png)
+![](media/du-after.png)
 
 ## Range
-![](../media/r-before.png)
-![](../media/r-after.png)
+![](media/r-before.png)
+![](media/r-after.png)
 
 # Analysis drawn on the effectiveness of each of the test classes
 
