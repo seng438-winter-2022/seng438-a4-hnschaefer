@@ -50,10 +50,17 @@ However, the test class is still far from being fully effective and achieving 10
 The Range class initially had a lower pit mutation test coverage because three of the five methods under test were class getters, namely: getUpperBound, getLowerBound, and getLength. These were one-line methods and could not have been tested with a large number of mutations. While we were able to fully test these methods, the number of killed mutations did not contribute significantly to the total metrics.
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
+The mutants that are considered to be equivalent result in the same behaviour from the SUT. Adding multiple equivalent mutants would result in redudancy, as if one mutant survives, the rest will too, and this will significantly decrease the overal mutation accuracy score. Having equivalent mutants will impact the accuracy of the mutation tests. If teams simply increase the number of mutants without filtering the equivalent ones, they may falsely assume their code is correct and of high quality. Mutation classification, which is similar to equivalence class testing, may be performed to avoid this problem.
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 
 As hinted in previous sections, we had to include more methods in our test suite to catch mutations. Specifically, we caught post-increment and -decrement by using adding more assert statements. After calling one method, we would assert the returned value is what we expect, and then use the class getters to detect if the object fields had changed.
+
+In the range class, our tests for shift did not include null input parameters, and therefore, we had to write one to catch mutations in the SUT. As this method uses ParamChecks to ensure the base range is not null prior to shifting, it was important to test cases where a null range is used.
+
+Other changes implemented to increase the mutation scores can be seen in the DataUtilities test class. For both calculateColumnTotal() and calculateRowTotal(), the SUT used a for loop to iterate through the input object. Our test cases could not identify the mutation that changed the comparison operator that was used to terminate the for loop. We had to include additional test cases that would send a mocked object with incorrect values and, under normal conditions, the methods would never enter the for loop with this object. Instead, it would return zero. With this, we could clearly check for when the comparison operator had been mutated, as a value other than zero would be returned.
+
+We also had to include a test case that would pass a double array with null elements when testing the clone() method. Although our test suite included passing null input parameters, we did not specifically test the behaviour of the SUT when an object with null elements/fields was passed.
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
 
