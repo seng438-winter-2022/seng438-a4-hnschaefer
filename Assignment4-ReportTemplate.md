@@ -105,6 +105,9 @@ For this test, we browse to the Wellness section and use the sort by and show in
 For this test, we navigate to the external Triangle rewards site, and from there go to the "learn more" page, and their YouTube page.
 
 # Explain the use of assertions and checkpoints
+Assertions and verification checkpoint are used to validate test cases by comparing inputs against expected values. Typically, assertions are used to check conditions that must past the test in order to proceed onto the next step . If the assertion fails, the test case would stop its execution and the following steps in the test case wouldn't run.  In testing websites, assertions can be used to ensure that an input or element is correct before proceeding. For example, asserting whether a button is pressed before opening a new page.  
+
+Verification checkpoints, unlike assertions, don't stop executing a test case if a checkpoint fails. The failure is noted, and the test continues its execution.  Due to this, checkpoints are used to execute conditions whose outcomes don't affect the following statements. As well, it's used to execute  the entire test case regardless of whether the checkpoint passed or failed. In testing websites, checkpoints can be used to verify elements on a page, such as page title, which can change without impacting other website functionalities.
 
 # How each functionality was tested with different test data
 
