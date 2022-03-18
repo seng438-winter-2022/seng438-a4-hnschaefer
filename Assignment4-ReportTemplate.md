@@ -13,13 +13,18 @@
 In this lab, mutation testing was performed on Range and DataUtilities classes from previous labs. Mutations were injected using the Pitest plug in for Eclipse. From these mutations, we were able to design new test cases to increase coverage of the SUT. GUI testing was also performed using Selenium plug in for Google Chrome. The SportChek website was tested for bugs using record and replay functionalities of this plug in. Selenium was also compared with another GUI testing tool, Sikulix.
 
 # Analysis of 10 Mutants of the Range class
-## getLowerBound
-- post-increment/decrement
-- pre-increment/decrement
-
-## getUpperBound
-- post-increment/decrement
-- pre-increment/decrement
+| Mutation Number | Mutation Description | Killed/Survived | Analysis |
+|---|---|---|---|
+| 1 | pre-increment/decrements |  killed in all methods | The mutations that changed local variables using pre incrementing operators were all killed because they would return incorrect values. |
+| 2 | post-increment/decrements | survived | These mutations first fetched the correct values from fields in the methods and then performed an increment/decrement operation. Initially, we did not perform a second assert to check for changes in object fields as we found it to be redundant; however, in order to increase pit mutation test coverage, we had to perform double asserts. |
+| 3 | checking for null inputs in Range class |  killed in almost all methods | These mutations would remove the check for null inputs, but as we specifically tested with null ranges, we were able to kill them. |
+| 4 | methods that remove local variables | killed in all methods | This mutation removed local variables from the SUT/replaced them with NaN values, however, as they were required for accurate calculations, the error was detected by our test suite. |
+| 5 | changing allowZeroCrossing in shift() from Range class | killed by tests | Our test suite included methods that specifically tested for zero crossing, and when the boolean was flipped, the wrong values were returned to the test cases and the assert call failed. |
+| 6 | changing a comparison operator in calculateColumnTotal | survived | This method in the SUT uses for loop with a comparison operator while iterating through the COLUMNS of the input Values2D object. If this comparison operator is flipped, the for loop does not run as intended. In order to kill this mutation, we had to write a test case that was expected to fail the for loop condition (and only pass if the mutation existed). |
+| 7 | changing a comparison operator in calculateRowTotal | survived | This method in the SUT uses for loop with a comparison operator while iterating through the ROWS of the input Values2D object. If this comparison operator is flipped, the for loop does not run as intended. In order to kill this mutation, we had to write a test case that was expected to fail the for loop condition (and only pass if the mutation existed). |
+| 8 | checking for null elements in 2D input array in clone() from the DataUtilities class | survived | While we considered passing null values when testing this method, our test suite did not include objects with null elements. Therefore, when the SUT was mutated to not have the null check, the mutation survived, and our test suite had to be updated. |
+| 9 | removing calls to class functions | killed in almost all test methods | When a mutation that removed a call to a class function was added to the SUT, the wrong value was returned/an exception was thrown. This was caught by our assert statements. |
+| 10 | initializing for loop iterators with the wrong starting value | killed in all test methods | Mutations that changed the initial value of for loop iterators were caught by our test suite. This is because they would return incorrect values that would be caught by our assert statements. |
 
 # Report all the statistics and the mutation score for each test class
 
@@ -44,35 +49,26 @@ However, the test class is still far from being fully effective and achieving 10
 
 The Range class initially had a lower pit mutation test coverage because three of the five methods under test were class getters, namely: getUpperBound, getLowerBound, and getLength. These were one-line methods and could not have been tested with a large number of mutations. While we were able to fully test these methods, the number of killed mutations did not contribute significantly to the total metrics.
 
-| Mutation Number | Mutation Description | Killed/Survived | Analysis |
-|---|---|---|---|
-| 1 | pre-increment/decrements |  killed in all methods | The mutations that changed local variables using pre incrementing operators were all killed because they would return incorrect values. |
-| 2 | post-increment/decrements | survived | These mutations first fetched the correct values from fields in the methods and then performed an increment/decrement operation. Initially, we did not perform a second assert to check for changes in object fields as we found it to be redundant; however, in order to increase pit mutation test coverage, we had to perform double asserts. |
-| 3 | checking for null inputs in Range class |  killed in almost all methods | These mutations would remove the check for null inputs, but as we specifically tested with null ranges, we were able to kill them. |
-| 4 | methods that remove local variables | killed in all methods | This mutation removed local variables from the SUT/replaced them with NaN values, however, as they were required for accurate calculations, the error was detected by our test suite. |
-| 5 | changing allowZeroCrossing in shift() from Range class | killed by tests | Our test suite included methods that specifically tested for zero crossing, and when the boolean was flipped, the wrong values were returned to the test cases and the assert call failed. |
-| 6 | changing a comparison operator in calculateColumnTotal | survived | This method in the SUT uses for loop with a comparison operator while iterating through the COLUMNS of the input Values2D object. If this comparison operator is flipped, the for loop does not run as intended. In order to kill this mutation, we had to write a test case that was expected to fail the for loop condition (and only pass if the mutation existed). |
-| 7 | changing a comparison operator in calculateRowTotal | survived | This method in the SUT uses for loop with a comparison operator while iterating through the ROWS of the input Values2D object. If this comparison operator is flipped, the for loop does not run as intended. In order to kill this mutation, we had to write a test case that was expected to fail the for loop condition (and only pass if the mutation existed). |
-| 8 | checking for null elements in 2D input array in clone() from the DataUtilities class | survived | While we considered passing null values when testing this method, our test suite did not include objects with null elements. Therefore, when the SUT was mutated to not have the null check, the mutation survived, and our test suite had to be updated. |
-| 9 | removing calls to class functions | killed in almost all test methods | When a mutation that removed a call to a class function was added to the SUT, the wrong value was returned/an exception was thrown. This was caught by our assert statements. |
-| 10 | initializing for loop iterators with the wrong starting value | killed in all test methods | Mutations that changed the initial value of for loop iterators were caught by our test suite. This is because they would return incorrect values that would be caught by our assert statements. |
-
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 
+As hinted in previous sections, we had to include more methods in our test suite to catch mutations. Specifically, we caught post-increment and -decrement by using adding more assert statements. After calling one method, we would assert the returned value is what we expect, and then use the class getters to detect if the object fields had changed.
+
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
 
 ### Need for mutation testing:
-We need mutation testing to ensure our test cases catch faults. If source code is changed, the test result should also change.
+We need mutation testing to ensure our test cases catch faults that are not typically considered in other white- or black-box testing techniques. If source code is changed, the test result should also change.
 
 ### Advantages:
 - Good quantitative analysis of the quality of test suite
 - Easy to identify tests to edit after receiving mutation test results
+- Introduce test cases that are not considered by other testing methods
 
 ### Disadvantages:
 - Computationally very expensive
 - Caused our IDEs to crash multiple times
+- Sometimes highlight redundant faults (ie. many equivalent cases are tested)
 
 # Explain your SELENIUM test case design process
 To create our test cases, we simply walked through unique functionalities as a regular user would do if they were navigating through the SportChek website. For each page, we created two separate tests for slightly different functionalities.
@@ -90,10 +86,10 @@ For this test, items are first added to the cart, then in another test they are 
 For this test, we navigated to the "Jerseys & Fan Wear" section of the site, and used the filter and next page functionalities.
 
 ### TC5 - Viewing FAQ's
-The FAQ page contains many avenues to explore. For the test purposes, we tested the button/link to shipping details and also the tracking order. As well each page would be scrolled upon to get to the apprpriate button. Then the final page was scrolled as well to ensure proper filling of all pages.
+The FAQ page contains many avenues to explore. For the test purposes, we tested the button/link to shipping details and also the tracking order. As well each page would be scrolled upon to get to the appropriate button. Then the final page was scrolled as well to ensure proper filling of all pages.
 
 ### TC6 - Store Locator
-The store locator takes a variety of inputs into its main objective functional query box. We decided that provind a valid and invalid input would suffice. The resulting page would be scrolled in order to ensure no bugs.
+The store locator takes a variety of inputs into its main objective functional query box. We decided that provine a valid and invalid input would suffice. The resulting page would be scrolled in order to ensure no bugs.
 
 ### TC7 - Browse Wellness
 For this test, we browse to the Wellness section and use the sort by and show in stock functionalities.
@@ -155,7 +151,7 @@ The major difficulty if the mutation testing was of course, getting the software
 
 Difficulties/Challenges/Lessons of UI Testing Portion
 
-The UI testing had a very minimal learning curve. The challenge came with verying the input to ensure good UI coverage of all of the elements. There is a difficulty that may arise such as the behaviour of UI may change depending on the traffic or other factors. Additionally, we found that there were certain elements (flash) which were not supported by the plugin we used primarily (selenium). This could cause some grief, because in order to achieve good UI coverage, you would have to search out and learn another UI testing framework. The second plugin we used, also proved to be quite a bit more involved to setup, hoever it did provide us with more options as to what it could test. We were also able to notice some tuning of the fidelity of the tests, which could allow for tolerance of the end product. This is something which could be useful depending on the scenario.
+The UI testing had a very minimal learning curve. The challenge came with verifying the input to ensure good UI coverage of all of the elements. There is a difficulty that may arise such as the behaviour of UI may change depending on the traffic or other factors. Additionally, we found that there were certain elements (flash) which were not supported by the plugin we used primarily (selenium). This could cause some grief, because in order to achieve good UI coverage, you would have to search out and learn another UI testing framework. The second plugin we used, also proved to be quite a bit more involved to setup, however it did provide us with more options as to what it could test. We were also able to notice some tuning of the fidelity of the tests, which could allow for tolerance of the end product. This is something which could be useful depending on the scenario.
 
 # Comments/feedback on the lab itself
 This lab, when working, was a good exposure to industry tools used in GUI testing. Also we were exposed to mutation testing however there were quite a few problems with the lab content and some of were never able to get total functionality out of the lab. If the issues are worked out, this will surely be an informative lab.
